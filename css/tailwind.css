@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Define custom typefaces */
+
+@font-face {
+    font-family: nohemi;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/Nohemi-Regular.ttf) format('truetype'), /* Safari, Android, iOS */
+    url(../fonts/Nohemi-Regular.woff) format('woff'), /* Older Browsers */
+    url(../fonts/Nohemi-Regular.woff2) format('woff2'); /* Modern Browsers*/
+
+}
+
+@font-face {
+    font-family: mango-grotesque-black;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/MangoGrotesque-Black.ttf), /* Safari, Android, iOS */
+    url(../fonts/MangoGrotesque-Black.woff), /* Older Browsers */
+    url(../fonts/MangoGrotesque-Black.woff2), /* Modern Browsers */
+}
+
+@font-face {
+    font-family: mango-grotesque-bold;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/MangoGrotesque-Bold.ttf), /* Safari, Android, iOS */
+    url(../fonts/MangoGrotesque-Bold.woff), /* Older Browsers */
+    url(../fonts/MangoGrotesque-Bold.woff2), /* Modern Browsers */
+}
+
+
+
+/* Styles */
+
+.page-container {
+    @apply grid h-screen mx-6 grid-cols-12
+    bg-stone-300
+}
+
+.header-layout {
+    @apply grid grid-flow-row p-0 col-span-full 
+    border-black border row-span-1 h-24 overflow-hidden
+    bg-stone-300 mt-5
+}
+
+.header-main {
+    @apply font-nohemi grid grid-flow-row gap-x-6 
+col-start-1 col-span-4 border text-2xl content-end
+}
+
+.heder-title {
+    @apply col-span-1 col-start-1 border text-wrap 
+    self-center justify-self-center sticky top-0
+}
+
+.header-current {
+    @apply col-span-1 col-start-2 text-wrap border
+}
+
+.header-location {
+    @apply col-span-1 col-start-3 text-wrap border
+}
+
+.header-nav {
+    @apply col-end-12 col-span-5 border font-nohemi text-2xl
+    grid grid-flow-row justify-around content-end
+}
+.desktop-nav{
+    @apply flex 
+}
+
+main {
+    @apply h-screen bg-stone-300 col-span-full 
+    border border-red-400 mt-16
+}

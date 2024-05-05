@@ -1793,6 +1793,11 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-stone-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2404,6 +2409,151 @@ video {
 
 .forced-color-adjust-none {
   forced-color-adjust: none;
+}
+
+/* Define custom typefaces */
+
+@font-face {
+  font-family: nohemi;
+
+  font-style: normal;
+
+  font-weight: normal;
+
+  font-display: swap;
+
+  src: url(../fonts/Nohemi-Regular.ttf) format('truetype'), /* Safari, Android, iOS */
+    url(../fonts/Nohemi-Regular.woff) format('woff'), /* Older Browsers */
+    url(../fonts/Nohemi-Regular.woff2) format('woff2');
+
+  /* Modern Browsers*/
+}
+
+@font-face {
+  font-family: mango-grotesque-black;
+
+  font-style: normal;
+
+  font-weight: normal;
+
+  font-display: swap;
+
+  src: url(../fonts/MangoGrotesque-Black.ttf), /* Safari, Android, iOS */
+    url(../fonts/MangoGrotesque-Black.woff), /* Older Browsers */
+    url(../fonts/MangoGrotesque-Black.woff2),
+
+  /* Modern Browsers */
+}
+
+@font-face {
+  font-family: mango-grotesque-bold;
+
+  font-style: normal;
+
+  font-weight: normal;
+
+  font-display: swap;
+
+  src: url(../fonts/MangoGrotesque-Bold.ttf), /* Safari, Android, iOS */
+    url(../fonts/MangoGrotesque-Bold.woff), /* Older Browsers */
+    url(../fonts/MangoGrotesque-Bold.woff2),
+
+  /* Modern Browsers */
+}
+
+/* Styles */
+
+.page-container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
+}
+
+.header-layout {
+  grid-column: 1 / -1;
+  grid-row: span 1 / span 1;
+  margin-top: 1.25rem;
+  display: grid;
+  height: 6rem;
+  grid-auto-flow: row;
+  overflow: hidden;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
+  padding: 0px;
+}
+
+.header-main {
+  grid-column: span 4 / span 4;
+  grid-column-start: 1;
+  display: grid;
+  grid-auto-flow: row;
+  align-content: flex-end;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  border-width: 1px;
+  font-family: Nohemi, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.heder-title {
+  position: sticky;
+  top: 0px;
+  grid-column: span 1 / span 1;
+  grid-column-start: 1;
+  align-self: center;
+  justify-self: center;
+  text-wrap: wrap;
+  border-width: 1px;
+}
+
+.header-current {
+  grid-column: span 1 / span 1;
+  grid-column-start: 2;
+  text-wrap: wrap;
+  border-width: 1px;
+}
+
+.header-location {
+  grid-column: span 1 / span 1;
+  grid-column-start: 3;
+  text-wrap: wrap;
+  border-width: 1px;
+}
+
+.header-nav {
+  grid-column: span 5 / span 5;
+  grid-column-end: 12;
+  display: grid;
+  grid-auto-flow: row;
+  align-content: flex-end;
+  justify-content: space-around;
+  border-width: 1px;
+  font-family: Nohemi, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.desktop-nav {
+  display: flex;
+}
+
+main {
+  grid-column: 1 / -1;
+  margin-top: 4rem;
+  height: 100vh;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
