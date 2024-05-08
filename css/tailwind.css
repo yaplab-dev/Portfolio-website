@@ -121,10 +121,16 @@ text-cream
 /* <Main> divisions */
 .description {
     @apply text-cel-1 text-xl font-fleuron justify-center self-end
-    col-span-1
+    col-span-2
+}
+.master {
+    @apply text-cel-1 text-[3vw] font-mango-grotesque-bold justify-end
+    col-start-4 content-end leading-none text-end align-middle
+    hover:underline hover:text-cel-0 h-11 self-end hover:cursor-none 
+    peer-hover:underline
 }
 .line {
-    @apply block text-end self-start truncate col-span-4
+    @apply block text-end self-start truncate col-span-4 mb-4
 }
 
 
@@ -139,4 +145,13 @@ text-cream
 .char1 {
     @apply inline-block font-mango-grotesque-black
     text-[16vw] leading-none
+}
+
+/* Tooltip */
+.tooltip {
+    @apply absolute peer-hover:flex hover:flex hover:cursor-none bg-cream 
+    text-red text-sm rounded-lg py-2 px-4 w-fit -top-16 right-0 
+    transform translate-x-4 shadow-lg before:content-[''] 
+    before:absolute before:-bottom-2 before:left-1/2 before:border-8 
+    before:border-transparent before:border-t-cream mr-4
 }
