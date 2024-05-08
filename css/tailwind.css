@@ -76,45 +76,67 @@
 }
 
 
-/* Styles */
+/* Base Styles */
 .page-container {
-    @apply grid h-screen mx-6 grid-cols-12
+    @apply grid h-screen mx-7 grid-cols-12 grid-rows-[auto_1fr]
     bg-transparent
 }
-
+/* Section styles */
 .header-layout {
     @apply grid grid-flow-row p-0 col-span-full 
     row-span-1 h-24 overflow-hidden
     bg-transparent mt-6 pt-3 text-white content-center
 }
+main {
+    @apply bg-transparent col-span-full  mt-12 text-cream 
+    grid gap-4 grid-cols-4 grid-rows-[1fr_auto] mx-8
+}
 
+/* <Header> divisions */
 .header-main {
     @apply font-nohemi grid grid-flow-row gap-x-7 
 col-start-1 col-span-4 text-xl  justify-around
 text-cream
 }
+.header-nav {
+    @apply col-end-12 col-span-5 font-nohemi text-xl grid grid-flow-row 
+    justify-center content-end text-cel-0
+}
 
+
+/* .header-main objects */
 .heder-title {
     @apply col-span-1 col-start-1  text-wrap 
     justify-self-end content-end font-nohemi-bold text-5xl 
-    text-cream
+    text-cream 
 }
-
 .header-current {
     @apply col-span-1 col-start-2 text-wrap
 }
-
 .header-location {
     @apply col-span-1 col-start-3 text-wrap 
 }
 
-.header-nav {
-    @apply col-end-12 col-span-5 font-nohemi text-2xl grid grid-flow-row 
-    justify-center content-end hover:underline text-cel-0
+
+/* <Main> divisions */
+.description {
+    @apply text-cel-1 text-xl font-fleuron justify-center self-end
+    col-span-1
+}
+.line {
+    @apply block text-end self-start truncate col-span-4
 }
 
-main {
-    @apply h-screen bg-transparent col-span-full 
-    mt-12
-}
 
+/* .line objects */
+.word {
+    @apply inline-block mr-5
+}
+.char {
+    @apply inline-block translate-x-0 translate-y-0
+    font-mango-grotesque-black text-[17vw] leading-none
+}
+.char1 {
+    @apply inline-block font-mango-grotesque-black
+    text-[16vw] leading-none
+}
