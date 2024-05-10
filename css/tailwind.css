@@ -8,17 +8,11 @@
         overflow: hidden;
     }
 }
-.grain-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../video/noise.gif);
-    opacity: .03;
-    pointer-events: none;
-    z-index: 10;
+@layer utilities {
+    .filter-grainy {
+        filter: url('#grainy');
+        @apply bg-dark;
+    }
 }
 
 /* Define custom typefaces */
@@ -76,21 +70,59 @@
 }
 
 
+/* Scroll */
+html{
+    scroll-behavior: smooth;
+}
+/* Grainy Background for #hero */
+#hero::before, header::before {
+    position: absolute;
+    left: 0; top: 0;
+    content: '';
+    width: 100%; height: 100%;
+    opacity: 15%; /* Adjust for transparency */
+    pointer-events: none;
+    background: #000000;
+    background: radial-gradient(circle at 50% 50%, rgba(27, 27, 27, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+    filter: url(#grainy);
+    z-index: -1;
+}
+
 /* Base Styles */
 .page-container {
-    @apply grid h-screen mx-7 grid-cols-12 grid-rows-[auto_1fr]
+    @apply grid min-h-screen mx-7 grid-cols-12 grid-rows-[auto_1fr]
     bg-transparent
 }
-/* Section styles */
+#hero {
+    @apply row-span-full col-span-full grid grid-rows-[auto-auto] min-h-screen
+}
+
+
+/* Bigger styles */
 .header-layout {
-    @apply grid grid-flow-row p-0 col-span-full 
+    @apply grid grid-flow-row col-span-full 
     row-span-1 h-24 overflow-hidden
-    bg-transparent mt-6 pt-3 text-white content-center
+    bg-dark pt-9 text-white content-center
+    fixed top-0 left-0 right-0 z-50 p-[10px]
+}
+.header-spacer {
+    @apply h-16
 }
 main {
-    @apply bg-transparent col-span-full  mt-12 text-cream 
-    grid gap-4 grid-cols-4 grid-rows-[1fr_auto] mx-8
+    @apply bg-transparent col-span-full  mt-28 text-cream 
+    grid gap-4 grid-cols-4 mx-10 min-h-screen 
 }
+
+
+/* Sections*/
+#start{
+    @apply bg-transparent grid gap-4 grid-rows-[1fr_auto]
+    mx-10 min-h-full
+}
+#story {
+    @apply relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4
+}
+
 
 /* <Header> divisions */
 .header-main {
@@ -121,16 +153,15 @@ text-cream
 /* <Main> divisions */
 .description {
     @apply text-cel-1 text-xl font-fleuron justify-center self-end
-    col-span-2
+    col-span-2 ml-4
 }
 .master {
     @apply text-cel-1 text-[3vw] font-mango-grotesque-bold justify-end
     col-start-4 content-end leading-none text-end align-middle
-    hover:underline hover:text-cel-0 h-11 self-end hover:cursor-none 
-    peer-hover:underline
+    h-11 self-end hover:cursor-none
 }
 .line {
-    @apply block text-end self-start truncate col-span-4 mb-4
+    @apply block text-end self-start truncate col-span-4 mb-4 text-cream
 }
 
 
@@ -148,10 +179,9 @@ text-cream
 }
 
 /* Tooltip */
+
 .tooltip {
-    @apply absolute peer-hover:flex hover:flex hover:cursor-none bg-cream 
-    text-red text-sm rounded-lg py-2 px-4 w-fit -top-16 right-0 
-    transform translate-x-4 shadow-lg before:content-[''] 
-    before:absolute before:-bottom-2 before:left-1/2 before:border-8 
-    before:border-transparent before:border-t-cream mr-4
+    @apply absolute peer-hover:flex hidden hover:flex bg-cream 
+    text-cel-3 text-base rounded-lg py-2 px-4 w-96 col-span-2 -top-16 right-0 
+    transform translate-x-4 shadow-lg z-20
 }

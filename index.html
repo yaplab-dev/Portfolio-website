@@ -7,57 +7,89 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-dark">
-    <div class="page-container">
-    <header class="header-layout">
+    <svg width="0" height="0" style="position: absolute;">
+    <defs>
+        <filter id="grainy" x="0" y="0">
+        <feTurbulence type="feTurbulence" baseFrequency="0.6" />
+        </filter>
+    </defs>
+    </svg>
+
+    <div class="page-container min-h-screen grid grid-rows-[auto_1fr] mx-7 grid-cols-12 bg-transparent">
+   
+    <!-- Hero Section -->
+            <header class="header-layout sticky top-0 z-10 bg-dark">
         <div class="header-main">
             <a href="#" class="heder-title">Pablo Fonseca</a>
-                <p class="header-current">Bioinformatics & <br> Science Outreach</p>
-                <p class="header-location">Based in Valencia <br> Spain</p>
+            <p class="header-current">Bioinformatics & <br> Science Outreach</p>
+            <p class="header-location">Based in Valencia <br> Spain</p>
         </div>
         <div class="header-nav">
             <nav class="desktop-nav flex">
-                <a href="#" class="px-2 hover:underline">Story,</a>
-                <a href="#" class="px-2 hover:underline">Projects,</a>
-                <a href="#" class="px-2 hover:underline">Skills,</a>
-                <a href="#" class="px-2 hover:underline">Connect</a>
+            <a href="#story" class="px-2 hover:underline">Story</a>
+            <a href="#" class="px-2 hover:underline">Projects</a>
+            <a href="#" class="px-2 hover:underline">Skills</a>
+            <a href="#" class="px-2 hover:underline">Connect</a>
             </nav>
         </div>
-    </header>
-    <main>
-        <div class="grid grid-cols-subgrid col-span-full align-bottom content-end mr-14 ">
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan, leo sit amet mattis interdum, est dui rhoncus ligula, sed lobortis metus arcu vel purus. Integer porta ultricies est, in molestie nisi pulvinar semper. Proin quis sem sit amet purus mattis interdum ac nec est. Donec et neque turpis. </p>
-        <div class="relative group col-start-4 flex justify-end">
-            <div class="master peer">[...]</div>
-        <div class="tooltip hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan, leo sit amet mattis interdum, est dui rhoncus ligula, sed lobortis metus arcu vel purus. Integer porta ultricies est, in molestie nisi pulvinar semper. Proin quis sem sit amet purus mattis interdum ac nec est. Donec et neque turpis.</div>
+        </header>
+        
+        <div id="hero" class="row-span-full col-span-full grid grid-rows-[auto_1fr] min-h-screen">
+        <div class="header-spacer"></div>
+        <!-- Start Section -->
+        <section id="start" class="grid grid-cols-4 col-span-full align-bottom content-end mr-14 min-h-full">
+        <p class="description col-span-3 ml-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+        </p>
+        <div class="relative group col-start-4 flex justify-end mr-16 self-end">
+            <div class="master peer leading-none">[...]</div>
+            <div class="tooltip">Tooltip text...</div>
         </div>
+
+        <!-- Line Section -->
+        <div class="line col-span-4 mb-4 text-cream">
+            <div class="word">
+            <div class="char">J</div>
+            <div class="char">A</div>
+            <div class="char">C</div>
+            <div class="char">K</div>
+            </div>
+            <div class="word">
+            <div class="char1">O</div>
+            <div class="char1">F</div>
+            </div>
+            <div class="word">
+            <div class="char1">A</div>
+            <div class="char1">L</div>
+            <div class="char1">L</div>
+            </div>
+            <div class="word">
+            <div class="char">T</div>
+            <div class="char">R</div>
+            <div class="char">A</div>
+            <div class="char">D</div>
+            <div class="char">E</div>
+            <div class="char">S</div>
+            </div>
+        </div>
+        </section>
     </div>
-        <div class="line">
-            <div class="word">
-                <div class="char">J</div>
-                <div class="char">A</div>
-                <div class="char">C</div>
-                <div class="char">K</div>
-                </div>
-            <div class="word">
-                <div class="char1">O</div>
-                <div class="char1">F</div>
-                </div>
-            <div class="word">
-                <div class="char1">A</div>
-                <div class="char1">L</div>
-                <div class="char1">L</div>
-                </div>
-            <div class="word">
-                <div class="char">T</div>
-                <div class="char">R</div>
-                <div class="char">A</div>
-                <div class="char">D</div>
-                <div class="char">E</div>
-                <div class="char">S</div>
-                </div>
-    </div>            
+
+    <!-- Story Section -->
+    <main id="story" class="bg-transparent gap-4 mx-10 relative pb-12 grid md:grid-cols-5 md:gap-10 md:space-x-4 before:absolute before:left-[-35px] before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-['']">
+        <h1>STORY</h1>
+        <div class="relative pb-12 md:col-span-2">
+        <div class="sticky top-0">
+            <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl">&bull;</span>
+            <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
+            <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
+            <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
+        </div>
+        </div>
+        <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+        {description}
+        </div>
     </main>
-    
-    <script src="js/main.js"></script>
+    </div>
 </body>
 </html>
