@@ -117,11 +117,9 @@ main {
 /* Sections*/
 #start{
     @apply bg-transparent grid gap-4 grid-rows-[1fr_auto]
-    mx-10 min-h-full
+    mx-10 min-h-full mb-14
 }
-#story {
-    @apply relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4
-}
+
 
 
 /* <Header> divisions */
@@ -152,36 +150,61 @@ text-cream
 
 /* <Main> divisions */
 .description {
-    @apply text-cel-1 text-xl font-fleuron justify-center self-end
-    col-span-2 ml-4
+    @apply text-cel-0 text-xl font-fleuron justify-start self-end
+    col-span-2 ml-4 col-start-1 left-0 text-left
+}
+.description-title {
+    @apply text-jk text-4xl font-fleuron justify-start self-end
+    col-span-1 ml-4 col-start-1 left-0 text-left
 }
 .master {
-    @apply text-cel-1 text-[3vw] font-mango-grotesque-bold justify-end
+    @apply text-jk text-[3vw] font-mango-grotesque-bold justify-end
     col-start-4 content-end leading-none text-end align-middle
     h-11 self-end hover:cursor-none
 }
 .line {
-    @apply block text-end self-start truncate col-span-4 mb-4 text-cream
+    @apply block text-end self-start truncate col-span-4 text-cream leading-none
 }
 
 
-/* .line objects */
+/* Hero text objects */
 .word {
     @apply inline-block mr-5
 }
 .char {
     @apply inline-block translate-x-0 translate-y-0
-    font-mango-grotesque-black text-[17vw] leading-none
+    font-mango-grotesque-black text-[18vw] leading-none
 }
 .char1 {
     @apply inline-block font-mango-grotesque-black
-    text-[16vw] leading-none
+    text-[15vw] leading-none
+}
+.link1 {
+    @apply text-jk text-base
 }
 
 /* Tooltip */
 
 .tooltip {
     @apply absolute peer-hover:flex hidden hover:flex bg-cream 
-    text-cel-3 text-base rounded-lg py-2 px-4 w-96 col-span-2 -top-16 right-0 
-    transform translate-x-4 shadow-lg z-20
+    text-cel-3 text-base rounded-lg py-2 px-4 col-span-3 -top-32 right-0
+    transform -translate-x-4 shadow-lg z-20 text-wrap min-w-[30vw] max-w-[50vw]
+    max-h-44
+}
+
+
+
+#parallax {
+    background: url('https://lakshikawishwajth.com/wp-content/uploads/2024/03/ezgif.com-optimize-6.gif') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#parallax {
+@apply h-lvh
+}
+
+@media (max-width: 768px) {
+    #parallax-section {
+        background-attachment: scroll;
+    }
 }
