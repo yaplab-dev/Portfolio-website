@@ -16,8 +16,7 @@
     </defs>
     </svg>
 
-    <div class="page-container min-h-screen grid grid-rows-[auto_1fr] mx-7 grid-cols-12 bg-transparent">
-   
+    <div id="app" class="page-container min-h-screen grid grid-rows-[auto_1fr] mx-7 grid-cols-12 bg-transparent">
     <!-- Hero Section -->
             <header class="header-layout sticky top-0 z-10 bg-dark">
         <div class="header-main">
@@ -42,7 +41,7 @@
         <p class="description-title col-span-2 ml-4">
             Hi there, I'm Pablo!        
         </p>
-        <p class="description col-span-3 ml-4">
+        <p class="description ml-4">
             I am a Molecular Biologist and Bioinformatician with a determination to blend programming, research insight and design to bring Science Outreach to a new levels
             As a former Cancer Genomics researcher at <a class="link1" href="https://cinbio.es/filo">CINBIO</a>  & <a class="link1" href="https://www.iisgaliciasur.es/areas-de-investigacion/cancer/oncologia-traslacional/oncologia-molecular-traslacional/">IISGS</a>, 
             I came to realize the true importance of ...
@@ -81,10 +80,34 @@
         </section>
     </div>
 
-<!-- Story Section -->
+<!-- Parallax Section -->
 <div id="parallax" class="parallax-section col-span-full grid grid-cols-12 relative">
         <img src="https://lakshikawishwajth.com/wp-content/uploads/2024/03/ezgif.com-optimize-6.gif" alt="Parallax Image" class="w-full object-cover">
     </div>
 </div>
+
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const {createApp} = Vue;
+    createApp({
+        data() {
+            return {
+                currentCursor: "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'white\'/></svg>'), auto"
+            };
+        },
+        methods: {
+            setCursor(type) {
+                if (type === 'text') {
+                    this.currentCursor = "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'black\'/></svg>'), auto";
+                } else {
+                    this.currentCursor = "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'white\'/></svg>'), auto";
+                }
+            }
+        }
+    }).mount('#hero');
+</script>
+
 </body>
 </html>

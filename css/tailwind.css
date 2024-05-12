@@ -151,7 +151,7 @@ text-cream
 /* <Main> divisions */
 .description {
     @apply text-cel-0 text-xl font-fleuron justify-start self-end
-    col-span-2 ml-4 col-start-1 left-0 text-left
+    col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] pb-3
 }
 .description-title {
     @apply text-jk text-4xl font-fleuron justify-start self-end
@@ -200,7 +200,7 @@ text-cream
     background-size: cover;
 }
 #parallax {
-@apply h-lvh
+@apply h-lvh 
 }
 
 @media (max-width: 768px) {

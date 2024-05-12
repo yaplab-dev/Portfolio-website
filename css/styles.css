@@ -1864,7 +1864,7 @@ video {
 
 .bg-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(53 53 53 / var(--tw-bg-opacity));
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -2643,7 +2643,7 @@ html{
   align-content: center;
   overflow: hidden;
   --tw-bg-opacity: 1;
-  background-color: rgb(53 53 53 / var(--tw-bg-opacity));
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity));
   padding: 10px;
   padding-top: 2.25rem;
   --tw-text-opacity: 1;
@@ -2746,8 +2746,10 @@ main {
   grid-column: span 2 / span 2;
   grid-column-start: 1;
   margin-left: 1rem;
+  width: 80%;
   justify-content: flex-start;
   align-self: flex-end;
+  padding-bottom: 0.75rem;
   text-align: left;
   font-family: Fleuron, sans-serif;
   font-size: 1.25rem;
@@ -2768,7 +2770,7 @@ main {
   font-size: 2.25rem;
   line-height: 2.5rem;
   --tw-text-opacity: 1;
-  color: rgb(241 140 121 / var(--tw-text-opacity));
+  color: rgb(213 123 107 / var(--tw-text-opacity));
 }
 
 .master {
@@ -2783,7 +2785,7 @@ main {
   font-size: 3vw;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(241 140 121 / var(--tw-text-opacity));
+  color: rgb(213 123 107 / var(--tw-text-opacity));
 }
 
 .master:hover {
@@ -2831,7 +2833,7 @@ main {
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(241 140 121 / var(--tw-text-opacity));
+  color: rgb(213 123 107 / var(--tw-text-opacity));
 }
 
 /* Tooltip */
