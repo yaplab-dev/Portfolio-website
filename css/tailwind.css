@@ -33,6 +33,14 @@
     src: url(../fonts/Nohemi-VF.ttf); /* Variable Font */
 }
 
+@font-face {
+    font-family: 'nikkei-pacific';
+    src: url('PangramPangram.woff') format('truetype');
+    font-weight: bold;
+    src: url('../fonts/PPNikkeiPacific-Ultrabold.ttf');
+    src: url('../fonts/PPNikkeiPacific-Ultrabold.woff2');
+    src: url('../fonts/PPNikkeiPacific-Ultrabold.woff')
+ }
 
 @font-face {
     font-family: mango-grotesque-black;
@@ -164,6 +172,7 @@ text-cream
 }
 .line {
     @apply block text-end self-start truncate col-span-4 text-cream leading-none
+    font-nikkei-pacific
 }
 
 
@@ -177,7 +186,7 @@ text-cream
 }
 .char1 {
     @apply inline-block font-mango-grotesque-black
-    text-[15vw] leading-none
+    text-[18vw] leading-none
 }
 .link1 {
     @apply text-jk text-base

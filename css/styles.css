@@ -2526,6 +2526,20 @@ video {
 }
 
 @font-face {
+  font-family: 'nikkei-pacific';
+
+  src: url('PangramPangram.woff') format('truetype');
+
+  font-weight: bold;
+
+  src: url('../fonts/PPNikkeiPacific-Ultrabold.ttf');
+
+  src: url('../fonts/PPNikkeiPacific-Ultrabold.woff2');
+
+  src: url('../fonts/PPNikkeiPacific-Ultrabold.woff')
+}
+
+@font-face {
   font-family: mango-grotesque-black;
 
   font-style: normal;
@@ -2800,6 +2814,7 @@ main {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: end;
+  font-family: Nikei-Pacific, sans-serif;
   line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(217 217 217 / var(--tw-text-opacity));
@@ -2825,7 +2840,7 @@ main {
 .char1 {
   display: inline-block;
   font-family: Mango-Grotesque-Black, sans-serif;
-  font-size: 15vw;
+  font-size: 18vw;
   line-height: 1;
 }
 

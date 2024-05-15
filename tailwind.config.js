@@ -36,7 +36,8 @@ module.exports = {
             'mango-grotesque-black': ['Mango-Grotesque-Black', 'sans-serif'],
             'mango-grotesque-bold': ['Mango-Grotesque-Bold', 'sans-serif'],
             'mango-grotesque-medium': ['Mango-Grotesque-Medium', 'sans-serif'],
-            'nohemi-bold': ['Nohemi-Bold', 'sans-serif']
+            'nohemi-bold': ['Nohemi-Bold', 'sans-serif'],
+            'nikkei-pacific': ['Nikei-Pacific', 'sans-serif']
         },
         extend: {
             cursor: {
