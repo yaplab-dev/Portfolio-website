@@ -23,19 +23,19 @@ module.exports = {
             white: '#ffffff',
             orange: '#ED6842',
             black: '#000000',
-            jk: '#D57B6B',
+            jk: '#EC5F5F',
             cerceta: '#00787C',
             ag: '#ABB1B0',
             dark: '#141414',
             grey: '#eaeaea',
-            yellow: '#ffdd00'
+            yellow: '#E2C400'
         },
         fontFamily: {
             'nohemi': ['Nohemi', 'sans-serif'],
             'fleuron': ['Fleuron', 'sans-serif'],
-            'mango-grotesque-black': ['Mango-Grotesque-Black', 'sans-serif'],
-            'mango-grotesque-bold': ['Mango-Grotesque-Bold', 'sans-serif'],
-            'mango-grotesque-medium': ['Mango-Grotesque-Medium', 'sans-serif'],
+            'telegraf': ['Telegraf', 'sans-serif'],
+            'telegraf-slant': ['Telegraf-Slant', 'sans-serif'],
+            'neue-machina': ['Neue-Machina', 'sans-serif'],
             'nohemi-bold': ['Nohemi-Bold', 'sans-serif'],
             'nikkei-pacific': ['Nikei-Pacific', 'sans-serif']
         },

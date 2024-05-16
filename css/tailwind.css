@@ -40,41 +40,32 @@
     src: url('../fonts/PPNikkeiPacific-Ultrabold.ttf');
     src: url('../fonts/PPNikkeiPacific-Ultrabold.woff2');
     src: url('../fonts/PPNikkeiPacific-Ultrabold.woff')
- }
-
-@font-face {
-    font-family: mango-grotesque-black;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url(../fonts/MangoGrotesque-Black.ttf), /* Safari, Android, iOS */
-    url(../fonts/MangoGrotesque-Black.woff), /* Older Browsers */
-    url(../fonts/MangoGrotesque-Black.woff2), /* Modern Browsers */
-}
-@font-face {
-    font-family: mango-grotesque-bold;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url(../fonts/MangoGrotesque-Bold.ttf), /* Safari, Android, iOS */
-    url(../fonts/MangoGrotesque-Bold.woff), /* Older Browsers */
-    url(../fonts/MangoGrotesque-Bold.woff2), /* Modern Browsers */
-}
-@font-face {
-    font-family: mango-grotesque-medium;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url(../fonts/MangoGrotesque-Medium.ttf), /* Safari, Android, iOS */
-    url(../fonts/MangoGrotesque-Medium.woff), /* Older Browsers */
-    url(../fonts/MangoGrotesque-Medium.woff2), /* Modern Browsers */
 }
 
 @font-face {
-    font-family: fleuron;
+    font-family: 'neue-machina';
     font-weight: normal;
     font-display: swap;
-    src: url(../fonts/FleuronRegular.otf);
+    src: url(../fonts/PPNeueMachina-InktrapMedium.ttf),
+    url(../fonts/PPNeueMachina-InktrapMedium.woff),
+    url(../fonts/PPNeueMachina-InktrapMedium.woff2);
+}
+
+@font-face {
+    font-family: 'telegraf-slant';
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/PPTelegraf-BoldSlanted.ttf),
+    url(../fonts/PPTelegraf-BoldSlanted.woff),
+    url(../fonts/PPTelegraf-BoldSlanted.woff2);
+}
+@font-face {
+    font-family: 'telegraf';
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/PPTelegraf-Bold.ttf),
+    url(../fonts/PPTelegraf-Bold.woff),
+    url(../fonts/PPTelegraf-Bold.woff2);
 }
 
 
@@ -158,21 +149,21 @@ text-cream
 
 /* <Main> divisions */
 .description {
-    @apply text-cel-0 text-xl font-fleuron justify-start self-end
-    col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] pb-3
+    @apply text-cel-0 text-xl font-neue-machina justify-start self-end
+    col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] 
 }
 .description-title {
-    @apply text-jk text-4xl font-fleuron justify-start self-end
-    col-span-1 ml-4 col-start-1 left-0 text-left
+    @apply text-yellow text-4xl font-telegraf justify-start self-end
+    col-span-1 ml-4 col-start-1 left-0 text-left -mb-2
 }
 .master {
-    @apply text-jk text-[3vw] font-mango-grotesque-bold justify-end
+    @apply text-yellow text-[3vw] font-nikkei-pacific justify-end
     col-start-4 content-end leading-none text-end align-middle
     h-11 self-end hover:cursor-none
 }
 .line {
     @apply block text-end self-start truncate col-span-4 text-cream leading-none
-    font-nikkei-pacific
+    font-telegraf-slant my-20
 }
 
 
@@ -182,14 +173,14 @@ text-cream
 }
 .char {
     @apply inline-block translate-x-0 translate-y-0
-    font-mango-grotesque-black text-[18vw] leading-none
+text-[8.5vw] leading-none
 }
 .char1 {
-    @apply inline-block font-mango-grotesque-black
-    text-[18vw] leading-none
+    @apply inline-block
+    text-[10vw] leading-none
 }
 .link1 {
-    @apply text-jk text-base
+    @apply text-yellow text-base
 }
 
 /* Tooltip */

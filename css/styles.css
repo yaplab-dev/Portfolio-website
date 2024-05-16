@@ -679,12 +679,12 @@ video {
   z-index: 10;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 
-.col-span-3 {
-  grid-column: span 3 / span 3;
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .col-span-4 {
@@ -2540,61 +2540,39 @@ video {
 }
 
 @font-face {
-  font-family: mango-grotesque-black;
-
-  font-style: normal;
+  font-family: 'neue-machina';
 
   font-weight: normal;
 
   font-display: swap;
 
-  src: url(../fonts/MangoGrotesque-Black.ttf), /* Safari, Android, iOS */
-    url(../fonts/MangoGrotesque-Black.woff), /* Older Browsers */
-    url(../fonts/MangoGrotesque-Black.woff2),
-
-  /* Modern Browsers */
+  src: url(../fonts/PPNeueMachina-InktrapMedium.ttf),
+    url(../fonts/PPNeueMachina-InktrapMedium.woff),
+    url(../fonts/PPNeueMachina-InktrapMedium.woff2);
 }
 
 @font-face {
-  font-family: mango-grotesque-bold;
-
-  font-style: normal;
+  font-family: 'telegraf-slant';
 
   font-weight: normal;
 
   font-display: swap;
 
-  src: url(../fonts/MangoGrotesque-Bold.ttf), /* Safari, Android, iOS */
-    url(../fonts/MangoGrotesque-Bold.woff), /* Older Browsers */
-    url(../fonts/MangoGrotesque-Bold.woff2),
-
-  /* Modern Browsers */
+  src: url(../fonts/PPTelegraf-BoldSlanted.ttf),
+    url(../fonts/PPTelegraf-BoldSlanted.woff),
+    url(../fonts/PPTelegraf-BoldSlanted.woff2);
 }
 
 @font-face {
-  font-family: mango-grotesque-medium;
-
-  font-style: normal;
+  font-family: 'telegraf';
 
   font-weight: normal;
 
   font-display: swap;
 
-  src: url(../fonts/MangoGrotesque-Medium.ttf), /* Safari, Android, iOS */
-    url(../fonts/MangoGrotesque-Medium.woff), /* Older Browsers */
-    url(../fonts/MangoGrotesque-Medium.woff2),
-
-  /* Modern Browsers */
-}
-
-@font-face {
-  font-family: fleuron;
-
-  font-weight: normal;
-
-  font-display: swap;
-
-  src: url(../fonts/FleuronRegular.otf);
+  src: url(../fonts/PPTelegraf-Bold.ttf),
+    url(../fonts/PPTelegraf-Bold.woff),
+    url(../fonts/PPTelegraf-Bold.woff2);
 }
 
 /* Scroll */
@@ -2763,9 +2741,8 @@ main {
   width: 80%;
   justify-content: flex-start;
   align-self: flex-end;
-  padding-bottom: 0.75rem;
   text-align: left;
-  font-family: Fleuron, sans-serif;
+  font-family: Neue-Machina, sans-serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -2777,14 +2754,15 @@ main {
   grid-column: span 1 / span 1;
   grid-column-start: 1;
   margin-left: 1rem;
+  margin-bottom: -0.5rem;
   justify-content: flex-start;
   align-self: flex-end;
   text-align: left;
-  font-family: Fleuron, sans-serif;
+  font-family: Telegraf, sans-serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
   --tw-text-opacity: 1;
-  color: rgb(213 123 107 / var(--tw-text-opacity));
+  color: rgb(226 196 0 / var(--tw-text-opacity));
 }
 
 .master {
@@ -2795,11 +2773,11 @@ main {
   align-self: flex-end;
   text-align: end;
   vertical-align: middle;
-  font-family: Mango-Grotesque-Bold, sans-serif;
+  font-family: Nikei-Pacific, sans-serif;
   font-size: 3vw;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(213 123 107 / var(--tw-text-opacity));
+  color: rgb(226 196 0 / var(--tw-text-opacity));
 }
 
 .master:hover {
@@ -2808,13 +2786,15 @@ main {
 
 .line {
   grid-column: span 4 / span 4;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   display: block;
   align-self: flex-start;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: end;
-  font-family: Nikei-Pacific, sans-serif;
+  font-family: Telegraf-Slant, sans-serif;
   line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(217 217 217 / var(--tw-text-opacity));
@@ -2832,15 +2812,13 @@ main {
   --tw-translate-x: 0px;
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  font-family: Mango-Grotesque-Black, sans-serif;
-  font-size: 18vw;
+  font-size: 8.5vw;
   line-height: 1;
 }
 
 .char1 {
   display: inline-block;
-  font-family: Mango-Grotesque-Black, sans-serif;
-  font-size: 18vw;
+  font-size: 10vw;
   line-height: 1;
 }
 
@@ -2848,7 +2826,7 @@ main {
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(213 123 107 / var(--tw-text-opacity));
+  color: rgb(226 196 0 / var(--tw-text-opacity));
 }
 
 /* Tooltip */
