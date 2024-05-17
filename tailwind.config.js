@@ -34,6 +34,7 @@ module.exports = {
             'nohemi': ['Nohemi', 'sans-serif'],
             'fleuron': ['Fleuron', 'sans-serif'],
             'telegraf': ['Telegraf', 'sans-serif'],
+            'telegraf-reg': ['Telegraf-Reg', 'sans-serif'],
             'telegraf-slant': ['Telegraf-Slant', 'sans-serif'],
             'neue-machina': ['Neue-Machina', 'sans-serif'],
             'nohemi-bold': ['Nohemi-Bold', 'sans-serif'],

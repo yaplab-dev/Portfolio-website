@@ -67,6 +67,15 @@
     url(../fonts/PPTelegraf-Bold.woff),
     url(../fonts/PPTelegraf-Bold.woff2);
 }
+@font-face {
+    font-family: 'telegraf-reg';
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/PPTelegraf-Regular.ttf),
+    url(../fonts/PPTelegraf-Regular.woff),
+    url(../fonts/PPTelegraf-Regular.woff2);
+}
+
 
 
 /* Scroll */
@@ -150,19 +159,20 @@ text-cream
 /* <Main> divisions */
 .description {
     @apply text-cel-0 text-xl font-neue-machina justify-start self-end
-    col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] 
+    col-span-2 ml-4 col-start-1 left-0 text-left w-[80%]  mb-10
 }
 .description-title {
-    @apply text-yellow text-4xl font-telegraf justify-start self-end
-    col-span-1 ml-4 col-start-1 left-0 text-left -mb-2
+    @apply text-cream text-4xl font-telegraf justify-start self-end
+    col-span-1 ml-4 col-start-1 left-0 text-left -mb-2 -mt-10
 }
+
 .master {
-    @apply text-yellow text-[3vw] font-nikkei-pacific justify-end
+    @apply text-yellow text-[1.5vw] font-nikkei-pacific justify-end
     col-start-4 content-end leading-none text-end align-middle
-    h-11 self-end hover:cursor-none
+    h-11 self-end hover:cursor-none -mb-20 mr-8
 }
 .line {
-    @apply block text-end self-start truncate col-span-4 text-cream leading-none
+    @apply block text-center self-start truncate col-span-4 text-cream leading-none
     font-telegraf-slant my-20
 }
 
@@ -173,7 +183,7 @@ text-cream
 }
 .char {
     @apply inline-block translate-x-0 translate-y-0
-text-[8.5vw] leading-none
+text-[8vw] leading-none
 }
 .link1 {
     @apply text-yellow text-base
@@ -183,11 +193,10 @@ text-[8.5vw] leading-none
 
 .tooltip {
     @apply absolute peer-hover:flex hidden hover:flex bg-cream 
-    text-cel-3 text-base rounded-lg py-2 px-4 col-span-3 -top-32 right-0
+    text-jk text-base rounded-lg py-2 px-4 col-span-3 -top-32 right-0
     transform -translate-x-4 shadow-lg z-20 text-wrap min-w-[30vw] max-w-[50vw]
-    max-h-44
+    max-h-44 font-telegraf-reg hover:cursor-none text-start
 }
-
 
 
 #parallax {
