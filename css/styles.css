@@ -2816,12 +2816,6 @@ main {
   line-height: 1;
 }
 
-.char1 {
-  display: inline-block;
-  font-size: 10vw;
-  line-height: 1;
-}
-
 .link1 {
   font-size: 1rem;
   line-height: 1.5rem;

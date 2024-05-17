@@ -175,10 +175,6 @@ text-cream
     @apply inline-block translate-x-0 translate-y-0
 text-[8.5vw] leading-none
 }
-.char1 {
-    @apply inline-block
-    text-[10vw] leading-none
-}
 .link1 {
     @apply text-yellow text-base
 }
