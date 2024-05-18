@@ -6,11 +6,9 @@
     <title>Pablo Fonseca - Portfolio web | Bioinformática, genética, divulgación, desarrollo web, programación, comunicación científica.</title>
     <details>Lorem ipsum</details>
     <link rel="stylesheet" href="css/styles.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-dark">
     <svg width="0" height="0" style="position: absolute;">
@@ -22,114 +20,171 @@
     </svg>
 
     <div id="app" class="page-container min-h-screen grid grid-rows-[auto_1fr] mx-7 grid-cols-12 bg-transparent">
-    <!-- Hero Section -->
-            <header class="header-layout sticky top-0 z-10 bg-dark">
-        <div class="header-main">
-            <a href="#" class="heder-title">Pablo Fonseca</a>
-            <p class="header-current">Bioinformatics & <br> Science Outreach</p>
-            <p class="header-location">Based in Valencia <br> Spain</p>
-        </div>
-        <div class="header-nav">
-            <nav class="desktop-nav flex">
-            <a href="#parallax" class="px-2 hover:underline">Story</a>
-            <a href="#" class="px-2 hover:underline">Projects</a>
-            <a href="#" class="px-2 hover:underline">Skills</a>
-            <a href="#" class="px-2 hover:underline">Connect</a>
-            </nav>
-        </div>
+        <!-- Hero Section -->
+        <header class="header-layout sticky top-0 z-10 bg-dark col-span-full">
+            <div class="header-main">
+                <a href="#" class="header-title">Pablo Fonseca</a>
+                <p class="header-current">Bioinformatics & <br> Science Outreach</p>
+                <p class="header-location">Based in Valencia <br> Spain</p>
+            </div>
+            <div class="header-nav">
+                <nav class="desktop-nav flex">
+                    <a href="#parallax" class="px-2 hover:underline">Story</a>
+                    <a href="#" class="px-2 hover:underline">Projects</a>
+                    <a href="#" class="px-2 hover:underline">Skills</a>
+                    <a href="#" class="px-2 hover:underline">Connect</a>
+                </nav>
+            </div>
         </header>
         
         <div id="hero" class="row-span-full col-span-full grid grid-rows-[auto_1fr] min-h-screen">
-        <div class="header-spacer"></div>
-        <!-- Start Section -->
-        <section id="start" class="grid grid-cols-4 col-span-full text-end align-bottom content-end mr-14">
+            <div class="header-spacer"></div>
+            <!-- Start Section -->
+            <section id="start" class="grid grid-cols-8 gap-4 col-span-full text-end align-bottom content-end mx-4">
+                <div class="col-span-full grid grid-cols-8 gap-4 mt-36 -mb-28">
+                    <!-- Bento Grid Section -->
+                    <div class="bento-container col-start-5 col-span-3 grid grid-cols-3 gap-2 justify-start h-4/5">
+                        <div class="bg-red-200 p-4 rounded-lg shadow-md flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Genetics
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Genetics content...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-200 p-4 rounded-lg shadow-md col-span-2 flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Bioinformatics
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Bioinformatics content...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-200 p-4 rounded-lg shadow-md flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Programming
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Programming content...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-yellow-200 p-4 rounded-lg shadow-md flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Data Analysis
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Data Analysis content...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-purple-200 p-4 rounded-lg shadow-md flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Web Development
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Web Development content...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-pink-200 p-4 rounded-lg shadow-md col-span-2 flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Science Outreach
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Science Outreach content...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-200 p-4 rounded-lg shadow-md flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    Design
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Design content...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="description-container col-span-4 self-end">
+                    <p class="description-title ml-4">Hi there, I'm Pablo!</p>
+                    <p class="description ml-4">
+                        I am a Molecular Biologist and Bioinformatician with a determination to blend programming, research insight and design to bring Science Outreach to a new level. As a former Cancer Genomics researcher at <a class="link1" href="https://cinbio.es/filo">CINBIO</a> & <a class="link1" href="https://www.iisgaliciasur.es/areas-de-investigacion/cancer/oncologia-traslacional/oncologia-molecular-traslacional/">IISGS</a>, I came to realize the true importance.
+                    </p>
+                    
+                </div>
+                
+                <div class="relative group col-end-9 col-span-2 flex justify-end mr-16 self-end">
+                    <div class="master peer">master of... none?</div>
+                    <div class="tooltip">We are all familiar with the adage, "A jack of all trades is a master of none", but how many people know the full quote? I didn't until recently.
+                        The complete quote attributed to William Shakespeare is, "A jack of all trades is a master of none, but oftentimes better than a master of one." Huh. So this saying which was originally meant to be a compliment turned minor insult has resurfaced as a compliment in today's gig economy.</div>
+                </div>
 
-        <!-- Bento Grid Section -->
-        <div class="bento-grid col-span-full grid grid-cols-12 gap-4 mt-36 -mb-28">
-        <div class=" col-span-5 col-start-7 grid grid-cols-3 gap-2 justify-start">
-            <div class="bg-ag p-4 rounded-lg shadow-md">Genetics</div>
-            <div class="bg-ag p-4 rounded-lg shadow-md col-span-2">Bioinformatics</div>
-            <div class="bg-ag p-4 rounded-lg shadow-md">Programming</div>
-            <div class="bg-ag p-4 rounded-lg shadow-md">Data Analysis</div>
-            <div class="bg-ag p-4 rounded-lg shadow-md">Web Development</div>
-            <div class="bg-ag p-4 rounded-lg shadow-md col-span-2">Science Outreach</div>
-            <div class="bg-ag p-4 rounded-lg shadow-md">Design</div>
+                <!-- Line Section -->
+                <div class="line col-span-8 text-cream mt-8">
+                    <div class="word">
+                        <div class="char">J</div>
+                        <div class="char">A</div>
+                        <div class="char">C</div>
+                        <div class="char">K</div>
+                    </div>
+                    <div class="word">
+                        <div class="char">O</div>
+                        <div class="char">F</div>
+                    </div>
+                    <div class="word">
+                        <div class="char">A</div>
+                        <div class="char">L</div>
+                        <div class="char">L</div>
+                    </div>
+                    <div class="word">
+                        <div class="char">T</div>
+                        <div class="char">R</div>
+                        <div class="char">A</div>
+                        <div class="char">D</div>
+                        <div class="char">E</div>
+                        <div class="char">S</div>
+                    </div>
+                </div>
+            </section>
         </div>
+
+        <!-- Parallax Section -->
+        <div id="parallax" class="parallax-section col-span-full grid grid-cols-12 relative">
+            <img src="https://lakshikawishwajth.com/wp-content/uploads/2024/03/ezgif.com-optimize-6.gif" alt="Parallax Image" class="w-full object-cover">
         </div>
-
-        <p class="description-title col-span-2 ml-4">Hi there, I'm Pablo!</p>
-        <p class="description ml-4">
-            I am a Molecular Biologist and Bioinformatician with a determination <br> to blend programming, research insight and design to bring Science <br> Outreach to a new level.
-            As a former Cancer Genomics researcher <br> at <a class="link1" href="https://cinbio.es/filo">CINBIO</a>  & <a class="link1" href="https://www.iisgaliciasur.es/areas-de-investigacion/cancer/oncologia-traslacional/oncologia-molecular-traslacional/">IISGS</a>, 
-            I came to realize the true importance
-        </p>
-        <div class="relative group col-end-5 col-span-2 flex justify-end mr-16 self-end">
-            <div class="master peer leading-none">master of... none?</div>
-            <div class="tooltip">We are all familiar with the adage, "A jack of all trades is a master of none", but how many people know the full quote? I didn't until recently.
-                The complete quote attributed to William Shakespeare is, "A jack of all trades is a master of none, but oftentimes better than a master of one." Huh. So this saying which was originally meant to be a compliment turned minor insult has resurfaced as a compliment in today's gig economy.</div>
-        </div>
-
-
-
-        <!-- Line Section -->
-        <div class="line col-span-4 text-cream">
-            <div class="word">
-            <div class="char">J</div>
-            <div class="char">A</div>
-            <div class="char">C</div>
-            <div class="char">K</div>
-            </div>
-            <div class="word">
-            <div class="char">O</div>
-            <div class="char">F</div>
-            </div>
-            <div class="word">
-            <div class="char">A</div>
-            <div class="char">L</div>
-            <div class="char">L</div>
-            </div>
-            <div class="word">
-            <div class="char">T</div>
-            <div class="char">R</div>
-            <div class="char">A</div>
-            <div class="char">D</div>
-            <div class="char">E</div>
-            <div class="char">S</div>
-            </div>
-        </div>
-        </section>
     </div>
 
-<!-- Parallax Section -->
-<div id="parallax" class="parallax-section col-span-full grid grid-cols-12 relative">
-        <img src="https://lakshikawishwajth.com/wp-content/uploads/2024/03/ezgif.com-optimize-6.gif" alt="Parallax Image" class="w-full object-cover">
-    </div>
-</div>
-
-
-
-<script src="https://unpkg.com/vue@next"></script>
-<script>
-    const {createApp} = Vue;
-    createApp({
-        data() {
-            return {
-                currentCursor: "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'white\'/></svg>'), auto"
-            };
-        },
-        methods: {
-            setCursor(type) {
-                if (type === 'text') {
-                    this.currentCursor = "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'black\'/></svg>'), auto";
-                } else {
-                    this.currentCursor = "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'white\'/></svg>'), auto";
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const {createApp} = Vue;
+        createApp({
+            data() {
+                return {
+                    currentCursor: "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'white\'/></svg>'), auto"
+                };
+            },
+            methods: {
+                setCursor(type) {
+                    if (type === 'text') {
+                        this.currentCursor = "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'black\'/></svg>'), auto";
+                    } else {
+                        this.currentCursor = "url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' height=\'32\' width=\'32\'><circle cx=\'16\' cy=\'16\' r=\'6\' fill=\'white\'/></svg>'), auto";
+                    }
                 }
             }
-        }
-    }).mount('#hero');
-</script>
-
-
+        }).mount('#hero');
+    </script>
 </body>
 </html>

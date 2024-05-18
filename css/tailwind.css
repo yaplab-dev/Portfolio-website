@@ -158,36 +158,46 @@ text-cream
 
 /* <Main> divisions */
 .description {
-    @apply text-cel-0 text-xl font-neue-machina justify-start self-end
-    col-span-2 ml-4 col-start-1 left-0 text-left w-[80%]  mb-10
+    @apply text-cel-0 text-xl font-neue-machina justify-start self-end col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] mb-10 max-w-[40ch] leading-6 p-1 md:max-w-[90%];
 }
 .description-title {
     @apply text-cream text-4xl font-telegraf justify-start self-end
     col-span-1 ml-4 col-start-1 left-0 text-left -mb-2 -mt-10
 }
 
-.master {
-    @apply text-yellow text-[1.5vw] font-nikkei-pacific justify-end
-    col-start-4 content-end leading-none text-end align-middle
-    h-11 self-end hover:cursor-none -mb-20 mr-8
+.relative.group {
+    @apply col-end-9 col-span-2 flex justify-end mr-16;
 }
-.line {
-    @apply block text-center self-start truncate col-span-4 text-cream leading-none
-    font-telegraf-slant my-20
+.master {
+    @apply  leading-none relative md:-top-5 md:mb-0 -mb-12
+    text-yellow text-4xl mr-3 align-bottom
 }
 
+.line {
+    @apply flex flex-wrap justify-center items-center w-full text-cream mt-8 mb-16
+    font-telegraf-slant
+}
 
 /* Hero text objects */
 .word {
     @apply inline-block mr-5
 }
+.line .word {
+    @apply flex;
+}
+
 .char {
     @apply inline-block translate-x-0 translate-y-0
 text-[8vw] leading-none
 }
+.line .char {
+    @apply inline-block mx-1;
+}
+
 .link1 {
     @apply text-yellow text-base
 }
+
 
 /* Tooltip */
 
@@ -212,4 +222,43 @@ text-[8vw] leading-none
     #parallax-section {
         background-attachment: scroll;
     }
+}
+
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+}
+
+.flip-card-front {
+    background-color: #fff;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
 }
