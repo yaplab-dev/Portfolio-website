@@ -143,7 +143,7 @@ text-cream
 
 
 /* .header-main objects */
-.heder-title {
+.header-title {
     @apply col-span-1 col-start-1  text-wrap 
     justify-self-end content-end font-nohemi-bold text-5xl 
     text-cream 
@@ -155,14 +155,13 @@ text-cream
     @apply col-span-1 col-start-3 text-wrap 
 }
 
-
 /* <Main> divisions */
 .description {
     @apply text-cel-0 text-xl font-neue-machina justify-start self-end col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] mb-10 max-w-[40ch] leading-6 p-1 md:max-w-[90%];
 }
 .description-title {
     @apply text-cream text-4xl font-telegraf justify-start self-end
-    col-span-1 ml-4 col-start-1 left-0 text-left -mb-2 -mt-10
+    col-span-1 ml-4 col-start-1 left-0 text-left -mt-10
 }
 
 .relative.group {

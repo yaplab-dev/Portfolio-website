@@ -2765,7 +2765,7 @@ main {
 
 /* .header-main objects */
 
-.heder-title {
+.header-title {
   grid-column: span 1 / span 1;
   grid-column-start: 1;
   align-content: flex-end;
@@ -2822,7 +2822,6 @@ main {
   grid-column: span 1 / span 1;
   grid-column-start: 1;
   margin-left: 1rem;
-  margin-bottom: -0.5rem;
   margin-top: -2.5rem;
   justify-content: flex-start;
   align-self: flex-end;
