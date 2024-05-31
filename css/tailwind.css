@@ -157,10 +157,10 @@ text-cream
 
 /* <Main> divisions */
 .description {
-    @apply text-cel-0 text-xl font-neue-machina justify-start self-end col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] mb-10 max-w-[40ch] leading-6 p-1 md:max-w-[90%];
+    @apply text-cream text-xl font-neue-machina justify-start self-end col-span-2 ml-4 col-start-1 left-0 text-left w-[80%] mb-10 max-w-[40ch] leading-6 p-1 md:max-w-[90%];
 }
 .description-title {
-    @apply text-cream text-4xl font-telegraf justify-start self-end
+    @apply text-cel-0 text-4xl font-telegraf justify-start self-end
     col-span-1 ml-4 col-start-1 left-0 text-left -mt-10
 }
 
@@ -173,7 +173,8 @@ text-cream
 }
 
 .line {
-    @apply flex flex-wrap justify-center items-center w-full text-cream mt-8 mb-16
+
+    @apply flex flex-wrap justify-center items-center w-full  mt-8 mb-16
     font-telegraf-slant
 }
 
@@ -224,40 +225,42 @@ text-[8vw] leading-none
 }
 
 
-.flip-card {
-    background-color: transparent;
-    perspective: 1000px;
-}
+/* Bento */
+@layer components {
+    .flip-card {
+        @apply bg-transparent relative rounded-lg shadow-md;
+        perspective: 1000px;
+    }
 
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
+    .flip-card-inner {
+        @apply relative w-full h-full text-center transition-transform duration-500 ease-in-out;
+        transform-style: preserve-3d;
+    }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
+    .flip-card:hover .flip-card-inner {
+        @apply transform;
+        transform: rotateY(180deg);
+    }
 
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 0.5rem; /* Tailwind's rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
-}
+    .flip-card-front, .flip-card-back {
+        @apply absolute w-full h-full rounded-lg shadow-md;
+        backface-visibility: hidden;
+    }
 
-.flip-card-front {
-    background-color: #fff;
-    color: black;
-}
+    .flip-card-front {
+        @apply bg-white text-black;
+    }
 
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
+    .flip-card-back {
+        @apply bg-blue-2 text-white;
+        transform: rotateY(180deg);
+    }
+
+    .general-container {
+        @apply bg-transparent rounded-lg shadow-md p-4;
+    }
+
+    .sub-grid {
+        @apply grid grid-cols-2 gap-1 mt-2;
+    }
 }

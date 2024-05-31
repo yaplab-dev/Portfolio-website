@@ -588,6 +588,80 @@ video {
   }
 }
 
+.flip-card {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.flip-card.group {
+  grid-column: span 2 / span 2;
+  grid-column-end: 9;
+  margin-right: 4rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flip-card-inner.group {
+  grid-column: span 2 / span 2;
+  grid-column-end: 9;
+  margin-right: 4rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.flip-card-back {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 53 70 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transform: rotateY(180deg);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -707,6 +781,10 @@ video {
   grid-column-end: 9;
 }
 
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .row-span-full {
   grid-row: 1 / -1;
 }
@@ -763,10 +841,6 @@ video {
 .mx-7 {
   margin-left: 1.75rem;
   margin-right: 1.75rem;
-}
-
-.-mb-28 {
-  margin-bottom: -7rem;
 }
 
 .ml-4 {
@@ -1256,6 +1330,10 @@ video {
 
 .grid-cols-8 {
   grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 
 .grid-rows-\[auto_1fr\] {
@@ -1910,6 +1988,10 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .decoration-slice {
@@ -2808,7 +2890,7 @@ main {
   font-size: 1.25rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(90 167 169 / var(--tw-text-opacity));
+  color: rgb(217 217 217 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -2830,7 +2912,7 @@ main {
   font-size: 2.25rem;
   line-height: 2.5rem;
   --tw-text-opacity: 1;
-  color: rgb(217 217 217 / var(--tw-text-opacity));
+  color: rgb(90 167 169 / var(--tw-text-opacity));
 }
 
 .relative.group {
@@ -2877,8 +2959,6 @@ main {
   align-items: center;
   justify-content: center;
   font-family: Telegraf-Slant, sans-serif;
-  --tw-text-opacity: 1;
-  color: rgb(217 217 217 / var(--tw-text-opacity));
 }
 
 /* Hero text objects */
@@ -2969,45 +3049,7 @@ main {
   }
 }
 
-.flip-card {
-  background-color: transparent;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 0.5rem;
-  /* Tailwind's rounded-lg */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Tailwind's shadow-md */
-}
-
-.flip-card-front {
-  background-color: #fff;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
+/* Bento */
 
 @media (min-width: 640px) {
   .sm\:container {
